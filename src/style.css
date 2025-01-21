@@ -9,3 +9,30 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.main-header {
+    background-color: #333333;
+    color: #f9f9f9;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.main-header .nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.main-header .nav-bar a {
+    color: #f14030;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.main-header .nav-bar a:hover {
+    color: #fafafa;
+}
