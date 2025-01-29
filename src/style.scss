@@ -31,7 +31,14 @@ body::before {
 .main-header {
     display: flex;
     flex-direction: column-reverse;
-}
+  
+    @media screen and (min-width: 992px) {
+        & {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+  }
 
 #menu {
     display: none;
@@ -49,6 +56,12 @@ body::before {
         flex-direction: column;
         justify-content: center;
         list-style-type: none;
+      
+        @media screen and (min-width: 992px) {
+            & {
+                flex-direction: row;
+            }
+        }
     }
 
     &__nav-item { /* .nav-bar__nav-item */
@@ -69,6 +82,17 @@ body::before {
             display: block;
         }
     }
+
+    @media (min-width: 768px) {
+
+        &__nav-list {
+            flex-direction: row;
+        }
+      
+        &__nav-item {
+            width: 100%;
+        }
+      }
 }
 
 /* SEARCH BAR */
@@ -76,8 +100,14 @@ body::before {
     display: flex;
     justify-content: end;
     height: 50px;
-
+  
     background-color: #1a1a1a;
+  
+    @media screen and (min-width: 992px) {
+        & {
+            display: none;
+        }     
+    }
 }
 
 /* MENÚ TOOGLE */
@@ -116,6 +146,12 @@ body::before {
     &__bottom-bread {
         bottom: .5rem;
     }
+
+    @media screen and (min-width: 992px) {
+        & {
+            display: none;
+        }        
+    }
 }
 
 main {
@@ -151,7 +187,27 @@ main {
     
                 width: 40vw;
     
+        }
+
+        @media screen and (min-width: 992px) {
+
+            & {
+                margin-bottom: 20px;
             }
+            
+            & h1 {
+                font-size: 3rem;
+            }
+            
+            & h2 {
+                font-size: 1.5rem;
+            }
+            
+            & p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
