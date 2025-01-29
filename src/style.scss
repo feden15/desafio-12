@@ -159,7 +159,7 @@ main {
     flex-direction: column;
     
     padding: 2rem 1.5rem;
-    width: 90vw;
+    width: 70vw;
     margin: 0 auto;
     flex: 1;
     
@@ -170,7 +170,24 @@ main {
         color: #fcc379;
     }
 
-    & .main-main { 
+    @media screen and (min-width: 1200px) {
+        & {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        & {
+            width: 100vw;
+        }
+    }
+
+    & .main-main {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 60%;
         
         & h2 {
             color: #fcc379;
@@ -184,9 +201,11 @@ main {
     
         &__side-column {
                 display: none;
-    
-                width: 40vw;
-    
+                width: 100%;
+            
+            & h2 {
+                color: #fcc379;
+            }
         }
 
         @media screen and (min-width: 992px) {
@@ -206,6 +225,22 @@ main {
             & p {
                 font-size: 1.2rem;
                 margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+    
+            & {
+                display: flex;
+                justify-content: space-between;
+            }
+          
+            &__side-column {
+                display: block;
+          
+                & p {
+                    height: 500px;
+                }
             }
         }
     }
