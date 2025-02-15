@@ -1,0 +1,1 @@
+import './ejercicioB.scss'
