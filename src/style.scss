@@ -15,7 +15,7 @@ body {
     color: #f9f9f9;
     
     background-image: url(imgs/fondo.webp);
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 
@@ -24,7 +24,7 @@ body::before {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     z-index: -1;
 }
 
@@ -38,7 +38,7 @@ body::before {
             margin-bottom: 20px;
         }
     }
-  }
+}
 
 #menu {
     display: none;
@@ -102,6 +102,12 @@ body::before {
     height: 50px;
   
     background-color: #1a1a1a;
+
+    @media screen and (min-width: 576px) {
+        & {
+            display: none;
+        }
+    }
   
     @media screen and (min-width: 992px) {
         & {
@@ -155,13 +161,12 @@ body::before {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
     
     padding: 2rem 1.5rem;
-    width: 70vw;
+    width: 80vw;
     margin: 0 auto;
     flex: 1;
+    gap: 20px;
     
     & h1 {
         font-size: 30px;
@@ -170,81 +175,65 @@ main {
         color: #fcc379;
     }
 
-    @media screen and (min-width: 1200px) {
-        & {
-            flex-direction: row;
-            gap: 20px;
-        }
-    }
+    
 
     @media screen and (min-width: 1440px) {
         & {
             width: 100vw;
         }
     }
+}
 
-    & .main-main {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        height: 60%;
+.info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    & h2 {
+        color: #fcc379;
+    }
+    
+    & p {
+        text-align: start;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: 992px) {
+
+        & {
+            margin-bottom: 20px;
+        }
+        
+        & h1 {
+            font-size: 3rem;
+        }
         
         & h2 {
-            color: #fcc379;
-            margin-top: 1.5rem;
+            font-size: 1.5rem;
         }
         
         & p {
-            margin-bottom: 1rem;
-            text-align: justify;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
-    
-        &__side-column {
-                display: none;
-                width: 100%;
-            
-            & h2 {
-                color: #fcc379;
-            }
-        }
+    }
 
-        @media screen and (min-width: 992px) {
+    &__side-column {
+        display: none;
 
-            & {
-                margin-bottom: 20px;
-            }
-            
-            & h1 {
-                font-size: 3rem;
-            }
-            
-            & h2 {
-                font-size: 1.5rem;
-            }
-            
-            & p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-            }
-        }
+        width: 50%;
+
+        max-width: 400px;
 
         @media screen and (min-width: 1200px) {
-    
             & {
-                display: flex;
-                justify-content: space-between;
-            }
-          
-            &__side-column {
                 display: block;
-          
-                & p {
-                    height: 500px;
-                }
             }
         }
     }
 }
+
+
 
 footer {
 
