@@ -9,7 +9,7 @@
 */
 
 body {
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(209, 242, 235);
 }
 
 .container {
@@ -17,8 +17,12 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 
-    width: 80vw;
+    background-color: rgb(72, 201, 176);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    width: 90vw;
     margin: auto;
+    border-radius: 5px;
 
     @media screen and (min-width: 992px) {
         & {
@@ -38,20 +42,26 @@ img {
     
     @media screen and (min-width: 576px) {
         & {
-            width: 50%;
+            width: 48%;
         }
     }
     
     @media screen and (min-width: 768px) {
         & {
-            width: 33%;
+            width: 32%;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        & {
+            margin: 5px;
         }
     }
 
     @media screen and (min-width: 1200px) {
         & {
-            width: 32%;
-            margin: 5px;
+            margin: 0;
+            width: 33%;
         }
     }
 
