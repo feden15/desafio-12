@@ -1,0 +1,197 @@
+/*  MEDIA QUERIES */
+/*  
+    X-Small    - >576px
+    Small      - ≥576px
+    Medium     - ≥768px
+    Large      - ≥992px
+    X-large    - ≥1200px
+    XX-large   - ≥1400px
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #f4f4f4;
+    height: 100vh;
+
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background: white;
+
+    width: 300px;
+    border-radius: 8px;
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        text-align: center;
+        color: #4CAF50;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+
+            border: none;
+            
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: darken(#4CAF50, 10%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+    .form-container {
+
+        width: 600px;
+        
+        form {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            gap: 10px;
+
+            label {
+                margin-top: 0;
+
+                justify-self: center;
+                align-self: center;
+            }
+            
+            input, textarea {
+                width: 30%;
+                margin: 0;
+            }
+
+            textarea {
+                height: 50%;
+            }
+
+            button {
+                width: 46%;
+                margin: 0;
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form-container {
+
+        width: 800px;
+
+        form {
+            input,textarea {
+                width: 35%;
+            }
+
+            button {
+                width: 47%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .form-container {
+
+        position: relative;
+        
+        form {
+            flex-direction: column;
+
+            position: relative;
+
+            input, textarea {
+                justify-self: start;
+                align-self: center;
+            }
+
+            input::placeholder {
+                visibility: hidden;
+            }
+            
+            textarea::placeholder {
+                visibility: hidden;                
+            }
+            
+            label:nth-child(1), label:nth-child(3) {
+                position: relative;
+                top: 15px;
+                right: 116px;
+                font-size: 0.8em;
+                background: white;
+                padding: 0 5px;
+            }
+        
+            label:nth-child(5) {
+                position: relative;
+                top: 15px;
+                right: 116px;
+                font-size: 0.8em;
+                background: white;
+                padding: 0 5px;
+            }
+
+            button {
+                justify-self: center;
+                align-self: center;
+
+                width: min-content;
+
+                margin-top: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    
+    }
+}
+
+/*
+Media queries:
+Extra-small: Muestra los campos del formulario uno debajo del otro.
+Small: Organiza los campos en dos columnas.
+Medium: Aumenta el tamaño de los campos de texto.
+Large: Añade etiquetas flotantes a los campos. (No obligatorio)
+Extra-large: Centra el formulario en la página.
+Extra-extra-large: Añade más espacio entre los campos.
+*/
