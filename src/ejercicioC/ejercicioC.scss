@@ -50,7 +50,7 @@ body {
         }
 
         textarea {
-            resize: none;
+            resize: none; /* Para que no puedan agrandar/achicar el área de texto */
             height: 100px;
         }
 
@@ -74,7 +74,7 @@ body {
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) { /* Small */
 
     .form-container {
 
@@ -112,24 +112,28 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { /* Medium */
     .form-container {
 
         width: 800px;
 
         form {
-            input,textarea {
+            input {
                 width: 35%;
             }
 
+            textarea {
+                width: 72.5%;
+            }
+
             button {
-                width: 47%;
+                width: 10%;
             }
         }
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { /* Large */
 
     .form-container {
 
@@ -141,6 +145,7 @@ body {
             position: relative;
 
             input, textarea {
+                width: 35%;
                 justify-self: start;
                 align-self: center;
             }
@@ -184,6 +189,39 @@ body {
         }
     
     }
+}
+
+@media screen and (min-width: 1200px) { /* X-Large */
+    
+    .form-container {
+        justify-self: center;
+        align-self: center;
+    }
+
+}
+
+@media screen and (min-width: 1400px) { /* XX-Large */
+    
+    .form-container {
+
+        height: 70vh;
+        
+        & h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            input, textarea {
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 50px;
+            }
+        }
+
+    }
+
 }
 
 /*
