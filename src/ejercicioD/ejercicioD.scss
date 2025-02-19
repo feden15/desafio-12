@@ -8,6 +8,11 @@
     XX-large   - ≥1400px
 */
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
@@ -56,6 +61,89 @@
 
         margin-top: 10px;
         padding: 5px;
+    }
+
+}
+
+@media screen and (min-width: 576px) { /* Small */
+// Small: Muestra la imagen al lado del contenido
+
+    .card-container {
+
+        flex-direction: row-reverse;
+        width: 80vw;
+
+        img {
+            width: 40%;
+            height: auto;
+        }
+
+        &__titulo-imagen {
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            h1 {
+                width: 100%;
+                text-align: start;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            p {
+                align-self: center;
+                margin: 5px;
+            }
+
+            button {
+                margin-top: auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) { /* Medium */
+// Medium: Aumenta el tamaño de la fuente del título
+
+    .card-container {
+
+        &__titulo-imagen {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px) { /* Large */
+// Large: Añade una sombra a la tarjeta
+
+    .card-container {
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    }
+
+}
+
+@media screen and (min-width: 1200px) { /* X-Large */
+// Extra-large: Centra la tarjeta en la página
+
+    body {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 1400px) { /* XX-Large */
+// Extra-extra-large: Añade un borde decorativo a la tarjeta
+
+    .card-container {
+        border: 5px ridge #68c4ea;
     }
 
 }
